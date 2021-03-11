@@ -1,4 +1,4 @@
-import { makeStyles, fade } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 const usestyles = makeStyles((theme) => ({
     root: {
@@ -6,15 +6,21 @@ const usestyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        [theme.breakpoints.down('sm')]:{
-            width:"320px"
-        }
+        [theme.breakpoints.down("sm")]: {
+            width: "320px",
+        },
     },
+    container: {
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center",
+    },
+
     mains: {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        border:'2px solid pink'
+        border: "2px solid pink",
     },
     card: {
         border: "2px solid black",
@@ -26,11 +32,10 @@ const usestyles = makeStyles((theme) => ({
         "&:hover": {
             backgroundColor: "#FFFAFA",
         },
-        [theme.breakpoints.down('sm')]:{
-            width:'140px',
-            height:'140px'
-        }
-
+        [theme.breakpoints.down("sm")]: {
+            width: "140px",
+            height: "140px",
+        },
     },
 
     CardMedia: {
@@ -38,7 +43,6 @@ const usestyles = makeStyles((theme) => ({
         marginTop: "10px",
         width: "130px",
         height: "130px",
-
     },
     textCenter: {
         textAlign: "center",

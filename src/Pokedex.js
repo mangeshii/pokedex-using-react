@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import SearchIcon from "@material-ui/icons/Search";
-import TextField from "@material-ui/core/TextField";
-import IconButton from "@material-ui/core/IconButton";
-import logo from "./pokeball.png";
-
+import logo from "./images/pokeball.png";
 import {
     Grid,
     Card,
@@ -13,16 +7,18 @@ import {
     CardMedia,
     Typography,
 } from "@material-ui/core";
-import { makeStyles, fade } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
 import usestyles from "./style.jsx";
+
+
 
 const Pokedex = (props) => {
     const { history } = props;
     const [pokemonData, setPokemonData] = useState({});
     const [filter, setFilter] = useState("");
 
+    console.log(pokemonData)
     useEffect(() => {
         axios
             .get("https://pokeapi.co/api/v2/pokemon?limit=807")
